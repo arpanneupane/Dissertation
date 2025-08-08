@@ -5,7 +5,7 @@ import re
 import torch
 from torch.utils.data import Dataset, DataLoader
 from transformers import BertTokenizer, BertForSequenceClassification
-from torch.optim import AdamW  # Changed import location
+from torch.optim import AdamW  
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix
 import seaborn as sns
@@ -79,7 +79,7 @@ class SentimentDataset(Dataset):
         return len(self.labels)
 
 # ========== 5. MODEL SETUP ==========
-#device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+#Apple Silicon Chip
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 print(f"Using device: {device}")
 
