@@ -20,7 +20,7 @@ nltk.download('stopwords')
 
 # Load dataset
 #df = pd.read_csv("sentiment_data.csv")
-#df = pd.read_csv("/Users/arpan/Desktop/Dissertation/sentiment_data.csv")
+#df = pd.read_csv("/Users/arpan/Desktop/Dissertation/Scripts/sentiment_data.csv")
 #these above script couldn’t read required files.
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
