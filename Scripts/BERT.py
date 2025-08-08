@@ -100,7 +100,7 @@ optimizer = AdamW(model.parameters(), lr=2e-5)
 
 print("\nStarting training...")
 model.train()
-for epoch in range(1):  # Recommend at least 3 epochs
+for epoch in range(1):  
     progress_bar = tqdm(train_loader, desc=f"Epoch {epoch+1}")
     for batch in progress_bar:
         optimizer.zero_grad()
@@ -117,16 +117,6 @@ for epoch in range(1):  # Recommend at least 3 epochs
         optimizer.step()
         
         progress_bar.set_postfix({'loss': f"{loss.item():.4f}"})
-
-# model.train()
-# for epoch in range(1):  # Single epoch for demonstration
-#     for batch in train_loader:
-#         optimizer.zero_grad()
-#         inputs = {k: v.to(device) for k, v in batch.items()}
-#         outputs = model(**inputs)
-#         loss = outputs.loss
-#         loss.backward()
-#         optimizer.step()
 
 # ========== 7. EVALUATION ==========
 print("\nEvaluating model...")
