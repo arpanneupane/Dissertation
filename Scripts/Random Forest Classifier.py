@@ -19,7 +19,7 @@ nltk.download('stopwords', quiet=True)
 
 # ====== 1. LOAD DATASET WITH ERROR HANDLING ======
 try:
-    # Dynamically locate CSV (works regardless of working directory)
+    
     script_dir = os.path.dirname(os.path.abspath(__file__))
     csv_path = os.path.join(script_dir, "sentiment_data.csv")
     
