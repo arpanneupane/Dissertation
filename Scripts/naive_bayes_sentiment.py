@@ -15,9 +15,8 @@ import seaborn as sns #interface for drawing attractive statistical graphics
 import matplotlib.pyplot as plt # plotting graphs and charts
 
 # Download required NLTK data
-# nltk.download('punkt_tab')
-# nltk.download('stopwords')
-# --> downloaded and marked as comment to stop re-download
+nltk.download('punkt_tab')
+nltk.download('stopwords')
 
 # Load dataset
 #df = pd.read_csv("sentiment_data.csv")
@@ -30,8 +29,6 @@ df = pd.read_csv(csv_path)
 
 
 # Text preprocessing
-#import pandas as pd
-#import re
 
 def preprocess(text):
     if pd.isna(text): # checks if the value of text is NaN (Not a Number)
