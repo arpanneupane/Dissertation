@@ -30,7 +30,7 @@ np.random.seed(SEED)
 # 1. Data Loading and Preprocessing
 def load_data(filepath):
     try:
-        #import os
+        
         script_dir = os.path.dirname(os.path.abspath(__file__))
         csv_path = os.path.join(script_dir, "sentiment_data.csv")
         df = pd.read_csv(csv_path)
@@ -108,7 +108,7 @@ def main():
     train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE)
     
-    # Device setup (MPS for Apple Silicon)
+    # Device setup (MPS for Apple Silicon Chip)
     device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
     print(f"\nUsing device: {device}")
     
