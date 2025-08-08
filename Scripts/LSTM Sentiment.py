@@ -16,9 +16,9 @@ from tensorflow.keras.layers import Embedding, LSTM, Dense
 from tensorflow.keras.utils import to_categorical
 import seaborn as sns
 
-# Download NLTK resources (with quiet mode)
-nltk.download('punkt', quiet=True)
-nltk.download('stopwords', quiet=True)
+
+ nltk.download('punkt', quiet=True)
+ nltk.download('stopwords', quiet=True)
 
 # ========== 1. DATA LOADING WITH ERROR HANDLING ==========
 try:
