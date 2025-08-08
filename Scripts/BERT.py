@@ -79,7 +79,7 @@ class SentimentDataset(Dataset):
         return len(self.labels)
 
 # ========== 5. MODEL SETUP ==========
-#Apple Silicon Chip
+#MPS for Apple Silicon Chip
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 print(f"Using device: {device}")
 
