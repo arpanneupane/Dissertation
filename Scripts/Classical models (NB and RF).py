@@ -1,5 +1,3 @@
-# **Code for Classical Models with Tuning (classical_models_tuning.py):**
-# ```python
 import os
 import pandas as pd
 import numpy as np
@@ -77,15 +75,12 @@ for model_name, model_info in models.items():
     labels = sorted(y.unique())
     cm = confusion_matrix(y_test, y_pred, labels=labels)
     plt.figure(figsize=(8,6))
-    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=labels, yticklabels=labels)
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=xticklabels=["Neg", "Neu", "Pos"], yticklabels=["Neg", "Neu", "Pos"])
     plt.xlabel("Predicted")
     plt.ylabel("True")
     plt.title(f"{model_name} - Confusion Matrix")
     plt.tight_layout()
-    plt.savefig(f"{model_name.replace(' ', '_')}_confusion_matrix.png")
+    plt.savefig(f"{model_name.replace(' ', '_')}_confusion_matrix.png") #saving confusion matrix
     plt.show()
     
-    # Save the model
-    joblib.dump(clf.best_estimator_, f"{model_name.replace(' ', '_')}_model.pkl")
-# Save the vectorizer
-joblib.dump(vectorizer, "tfidf_vectorizer.pkl")
+
